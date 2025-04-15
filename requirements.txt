@@ -4,3 +4,5 @@ tensorflow
 matplotlib
 soundfile
 ffmpeg-python
+streamlit
+pydub
