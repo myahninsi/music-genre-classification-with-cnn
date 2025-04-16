@@ -15,11 +15,11 @@ MODEL_SAVE_PATH = 'models/best_model.keras'
 
 # Load data
 train_generator, val_generator, test_generator, class_weights_dict = load_data_generators(
-    dataset_path=DATASET_PATH,
-    img_height=IMG_HEIGHT,
-    img_width=IMG_WIDTH,
-    batch_size=BATCH_SIZE,
-    augment=True
+    DATASET_PATH=DATASET_PATH,
+    IMG_HEIGHT=IMG_HEIGHT,
+    IMG_WIDTH=IMG_WIDTH,
+    BATCH_SIZE=BATCH_SIZE,
+    AUGMENT=True
 )
 
 NUM_CLASSES = train_generator.num_classes

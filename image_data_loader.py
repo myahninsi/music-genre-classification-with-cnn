@@ -1,24 +1,24 @@
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import numpy as np
 import os
-from sklearn.utils import class_weight
+from sklearn.utils.class_weight import compute_class_weight
 
 def load_data_generators(
-    dataset_path='Dataset/spectrograms_split',
-    img_height=300,
-    img_width=400,
-    batch_size=32,
-    augment=True):
+    DATASET_PATH='Dataset/spectrograms_split',
+    IMG_HEIGHT=300,
+    IMG_WIDTH=400,
+    BATCH_SIZE=32,
+    AUGMENT=True):
 
     """
     Loads training, validation, and test generators from specified dataset directory.
 
     Parameters:
-        dataset_path (str): Path to the dataset directory containing 'train', 'val', and 'test' folders.
-        img_height (int): Height to resize images to.
-        img_width (int): Width to resize images to.
-        batch_size (int): Number of images per batch.
-        augment (bool): Whether to apply augmentation to training images.
+        DATASET_PATH (str): Path to the dataset directory containing 'train', 'val', and 'test' folders.
+        IMG_HEIGHT (int): Height to resize images to.
+        IMG_WIDTH (int): Width to resize images to.
+        BATCH_SIZE (int): Number of images per batch.
+        AUGMENT (bool): Whether to apply augmentation to training images.
 
     Returns:
         train_generator, val_generator, test_generator, class_weights_dict
