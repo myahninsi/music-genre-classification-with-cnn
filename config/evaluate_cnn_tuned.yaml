@@ -1,0 +1,18 @@
+# We created this file to store the configuration parameters to evaluate the tuned CNN model. 
+
+# Dataset
+dataset_path: Dataset/spectrograms_split
+
+# Load model
+model_path_artifact: artifacts/cnn_tuned_model_path.txt
+
+# Image parameters
+img_height: 150
+img_width: 200
+batch_size: 16
+
+# Evaluation settings
+epochs: 30
+
+# Output path to save the test metrics
+evaluation_output_path: artifacts/cnn_tuned_evaluation_metrics.json

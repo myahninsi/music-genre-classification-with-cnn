@@ -1,8 +1,14 @@
-librosa
-numpy
 tensorflow
+keras-tuner
+numpy
 matplotlib
+scikit-learn
+librosa
 soundfile
 ffmpeg-python
-streamlit
 pydub
+streamlit
+google-cloud-storage
+apache-airflow-providers-google
+apache-airflow-providers-cncf-kubernetes
+apache-airflow-providers-docker

@@ -1,0 +1,17 @@
+# We created this config file to store the parameters to train the baseline CNN model. 
+
+# Dataset
+dataset_path: Dataset/spectrograms_split
+
+# Image parameters
+img_height: 300
+img_width: 400
+batch_size: 32
+
+# Training parameters
+epochs: 50
+
+# Output paths
+model_output_path: models/cnn_baseline.keras
+model_path_artifact: artifacts/cnn_baseline_model_path.txt
+metrics_artifact: artifacts/cnn_baseline_model_history.json

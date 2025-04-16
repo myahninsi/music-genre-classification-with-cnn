@@ -1,0 +1,15 @@
+# Dataset
+dataset_path: Dataset/spectrograms_split
+
+# Image parameters
+img_height: 150
+img_width: 200
+batch_size: 16
+
+# Training parameters
+epochs: 30
+
+# Output paths
+model_output_path: models/cnn_tuned.keras
+model_path_artifact: artifacts/cnn_tuned_model_path.txt
+metrics_artifact: artifacts/cnn_tuned_model_history.json
