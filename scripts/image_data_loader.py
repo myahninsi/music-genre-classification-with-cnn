@@ -1,6 +1,7 @@
 import numpy as np
 import os
 from tensorflow.keras.preprocessing.image import DirectoryIterator
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from typing import Tuple, Dict
 
 from sklearn.utils.class_weight import compute_class_weight
