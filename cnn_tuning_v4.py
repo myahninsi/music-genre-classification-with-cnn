@@ -4,7 +4,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras import Model
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
-from image_data_loader import load_data_generators
+from scripts.image_data_loader import load_data_generators
 import os
 
 # Constants
@@ -42,12 +42,22 @@ def build_finetune_model(hp):
         layer.trainable = False
 
     # Add dropout and dense layers on top
-    x = Dropout(hp.Float('dropout', 0.2, 0.4, step=0.1))(base_output)
+    x = Dropout(
+        hp.Float('dropout', 0.2, 0.4, step=0.1),
+        name=f"dropout_{hp.get('dropout')}"
+    )(base_output)
+
     x = Dense(
         hp.Int('dense_units', 64, 128, step=32),
-        activation='relu'
+        activation='relu',
+        name=f"dense_{hp.get('dense_units')}"
     )(x)
-    output = Dense(NUM_CLASSES, activation='softmax')(x)
+
+    output = Dense(
+        NUM_CLASSES,
+        activation='softmax',
+        name="output_layer"
+    )(x)
 
     model = Model(inputs=dummy_input, outputs=output)
 
